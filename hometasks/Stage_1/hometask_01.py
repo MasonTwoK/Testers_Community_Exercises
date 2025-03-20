@@ -10,5 +10,8 @@ print(value_int)
 
 
 # Задача 3: Виведіть на екран за допомогою функцій type та print тип двох змінних з задачі один та задачі два.
-print(type(value_text))
-print(type(value_int))
+text_type = type(value_text)
+print(text_type)
+
+int_type = type(value_int)
+print(int_type)
