@@ -13,10 +13,7 @@ num_1 = int(input("Enter your 1st number: "))
 num_2 = int(input("Enter your 2nd number: "))
 num_3 = int(input("Enter your 3rd number: "))
 
-total = num_1 + num_2 + num_3
 assert num_1 + num_2 + num_3 == 100, 'Total is not equal to 100'
-
-print("Total equals ", total)
 
 # Задача 3:Користувач повинен ввести пароль двічі для підтвердження.
 # Необхідно перевірити, чи обидва введені паролі співпадають.
