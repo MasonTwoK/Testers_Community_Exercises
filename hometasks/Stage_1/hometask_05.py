@@ -2,14 +2,9 @@
 # Користувач дає вам список (тобто в програмі у вас буде змінна зі списком оцінок), наприклад:
 # class_marks = [11, 10, 11, 10, 8]
 # Вам потрібно вирахувати середню оцінку в групі.
-string_of_marks = input("Enter list of marks: ")
-list_of_strings = string_of_marks.split(" ")
+class_marks = [11, 10, 11, 10, 8]
 
-list_of_ints = []
-for mark in list_of_strings:
-    list_of_ints.append(int(mark))
-
-avg_mark = sum(list_of_ints) / len(list_of_ints)
+avg_mark = sum(class_marks) / len(class_marks)
 print(f"Average mark of group is: {avg_mark}")
 
 
@@ -27,6 +22,7 @@ words_list.append("Will")
 print("Added new name to list")
 
 print(words_list)
+
 
 # Задача 3:
 # Попросіть користувача ввести рядок зі словами, підрахуйте кількість цих слів і виведіть користувачу,
