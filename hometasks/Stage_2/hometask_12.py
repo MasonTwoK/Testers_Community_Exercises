@@ -28,4 +28,3 @@ for item in combined_list:
 list_of_items = ["apple", "grape", "kiwi", "pear", "melon", "banana", "mango"]
 list_of_items.sort(key=len)
 print(list_of_items)
-
