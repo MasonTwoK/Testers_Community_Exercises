@@ -1,6 +1,9 @@
 # Задача 1 Створіть список з довільних чисел і виведіть його елементи, починаючи з другого елементу та з кроком 2.
-numbers = list(input("Enter numbers: "))
-result = f"Slice of numbers starting second element with step 2: {numbers[1::2]}"
+numbers_string = input("Enter numbers: ")
+numbers_list = numbers_string.split(' ')
+for index in range(len(numbers_list)):
+    int(numbers_list[index])
+result = f"Slice of numbers starting second element with step 2: {numbers_list[1::2]}"
 print(result)
 
 # Задача 2 Створіть рядок зі слів "Python is awesome!" і виведіть тільки слово "awesome" у верхньому регістрі з використанням зрізу.
@@ -13,4 +16,5 @@ print(result)
 # Напишіть програму яка приймає слово у користувача та за допомогою зріза, перевірте, чи є цей рядок паліндромом.
 # Використовуйте assert для перевірки результату:
 # якщо рядок є паліндромом, то assert має пройти; якщо ні, має бути виведено відповідне повідомлення про помилку.
-def task_3(entered_string): assert entered_string == entered_string[::-1], "Entered string is not palindrome"
+entered_string = input("Enter palindrome string: ")
+assert entered_string == entered_string[::-1], "Entered string is not palindrome"
