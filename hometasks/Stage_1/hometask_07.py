@@ -13,7 +13,7 @@ while iterator <= 100:
     nums_sum += iterator
     iterator += 1
 
-print(f"Triangle numbers of 100 is {nums_sum}")
+print(f"Triangular numbers of 100 is {nums_sum}")
 
 # Задача 3 Зворотній відлік:
 # Напишіть програму, яка використовує цикл while для виведення зворотного відліку від 10 до 1,

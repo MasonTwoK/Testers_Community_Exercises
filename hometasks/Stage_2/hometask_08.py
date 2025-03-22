@@ -1,6 +1,8 @@
 # Задача 1: Напишіть програму, яка приймає рядок від користувача і виводить його у верхньому регістрі.
-entered_string = input("Enter you string: ")
-print(entered_string.upper())
+def task_2():
+    entered_string = input("Enter you string: ")
+    result = entered_string.upper()
+    print(result)
 
 # Задача 2: Створіть програму, яка приймає рядок від користувача та заміняє всі входження символу 'a' на '*',
 # якщо символ ‘а’ відсутній до відповідне повідомлення.
@@ -14,4 +16,5 @@ else:
 entered_string = input("Enter string: ")
 print(f"Entered string: {entered_string}")
 
-print(f"Length of string by using length method: {len(entered_string)}")
+length_of_string = len(entered_string)
+print(f"Length of string by using length method: {length_of_string}")
