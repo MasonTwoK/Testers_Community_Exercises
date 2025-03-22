@@ -4,9 +4,7 @@
 location = input("Enter your location: ")
 temperature = input("Enter temperature outside: ")
 
-print("Location: " + location + ". Temperature = " + temperature + " (Concatenation)")
-print(f"Location: {location}. Temperature = {temperature} (f_string)")
-print("Location: {}. Temperature = {} (formatted string)".format(location,temperature))
+print(f"У місті {location} зараз {temperature} градусів Цельсія")
 
 # Задача 2
 # Напишіть програму, яка приймає від користувача три рядки: ім'я, вік і місце проживання. Виведіть ці дані у вигляді:
@@ -15,9 +13,7 @@ name = input("Enter user name: ")
 age = input("Enter user age: ")
 location = input("Enter location: ")
 
-print(f"Name: {name}, age = {age}, location: {location}. (f_string)")
-print("Name: {}, age = {}, location: {}. (formatted string)".format(name, age, location))
-print("Name: " + name + ", age = " + age + ", location: " + location + ". (concatenate)")
+print("Ім'я: {}, Вік: {} років, Місце проживання: {}".format(name, age, location))
 
 # Задача 3
 # Напишіть програму, яка приймає від користувача довжину сторін прямокутника та обчислює його периметр і площу.
@@ -29,6 +25,4 @@ width = float(input("Enter rectangle width: "))
 perimeter = (length + width) * 2
 area = length * width
 
-print(f"Length = {length}, Width = {width}, Perimeter = {perimeter}, Area = {area}. (f_string)")
-print("Length = {}, Width = {}, Perimeter = {}, Area = {} (formatted string)".format( length, width, perimeter, area))
-print("Length = " + str(length) + ", Width = " + str(width) + ", Perimeter = " + str(perimeter) + ", Area = " + str(area) + " (concatenation)")
+print("Довжина: " + str(length) + ", Ширина: " + str(width) + ", Периметр: " + str(perimeter) + ", Площа: " + str(area))
