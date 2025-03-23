@@ -1,18 +1,18 @@
 # Задача 1: Напишіть програму на Python, яка виводить таблицю множення від 1 до 10 за допомогою вкладених циклів.
-for i in range(1,10):
+for i in range(1, 10):
     print("*****")
-    for j in range(1,11):
-        print(f"{i}*{j} = {i*j}")
+    for j in range(1, 11):
+        print(f"{i}*{j} = {i * j}")
 
 # Задача 2: Створіть програму, яка приймає список чисел зробленний за допомогою range.
 # Виведіть кожне число, зведене в квадрат, за допомогою вкладеного циклу.
-list_of_nums = list(range(1,5))
+list_of_nums = list(range(1, 5))
 for num in list_of_nums:
     power = num * num
     print(power)
 
 # Задача 3: Напишіть програму, яка обчислює суму всіх чисел від 1 до 100 за допомогою циклу та функції range()
 total = 0
-for number in range(1,101):
+for number in range(1, 101):
     total += number
 print(total)
