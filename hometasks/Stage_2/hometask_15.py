@@ -11,7 +11,6 @@
 # dict_of_items = dict.fromkeys(list_of_items, 0)
 
 # Задача 3: Напишіть програму для створення словника, де ключами будуть імена студентів, а значеннями - їхні середні бали
-
 # Why developers left defined values at the top of method/function?
 students_list = []
 
