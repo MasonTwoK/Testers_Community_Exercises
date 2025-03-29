@@ -1,31 +1,36 @@
-our_dict = {
-        "key_1": "value_1",
-        "key_2": "value_2",
-        "key_3": "value_3"
-    }
+# Задача 1
+d = {'name': 'John Doe', 'age': 30,
+     'city': 'New York',
+     'email': 'johndoe@example.com'}
+# Попросіть користувача ввести ключ, який він бажає видалити, і видаліть цей елемент зі словника.
+# Та виведіть на екран змінений словник.
+app_switch = True
+while app_switch:
+    key = input("Enter the key of pair you want to delete: ")
+
+    if key in d.keys():
+        d.pop(key)
+        print(d)
+        app_switch = False
+    else:
+        print("Wrong key was entered! Try again..")
 
 
-def example_1(dictionary_object):
-    # print(dictionary_object['key_4'])  # KeyError: 'key_4'
-    print(dictionary_object['key_1'])  # value 1
-    print(dictionary_object.get('key_4'))  # None
-    print(dictionary_object.get('key_1'))  # value 1
-    print(dictionary_object.get("key_4", "text in case key was missing"))  # text in case key was missing
-    print(dictionary_object)
+# Задача 2
+d = {'name': 'Alice Smith',
+     'age': 25, 'city': 'Los Angeles',
+     'email': 'alice.smith@example.com',
+     'favorite_subjects': ['Mathematics', 'History', 'Literature']}
+# Виведіть з цього словника значення 'favorite_subjects' використовуючи цикл.
+for values in d['favorite_subjects']:
+    print(values)
 
 
-def example_2(dictionary_object):
-    print(dictionary_object.setdefault("key_5", "value_5"))  # updates dictionary_object with a new pair of key:value
-    print(dictionary_object.setdefault("key_1", "value_6"))  # Value for key_1 won't change by getting 2 parameters
-    print(dictionary_object)
-
-    dictionary_object["key_1"] = "value_6"  # updates "key_1" with "value_6"
-    dictionary_object["key_6"] = "value_6"  # updates dictionary with pair "key_6": "value_6"
-    print(dictionary_object)
-
-    dictionary_object.update({"key_1": "value_7"})  # updates "key_1" with "value_7" by getting {dict}
-    dictionary_object.update({"key_8": "value_8"})  # updates dictionary with pair "key_8": "value_8" by getting {dict}
-    print(dictionary_object)
-
-
-example_2(our_dict)
+# Задача 3
+favorites = {
+    'movies': ['Interstellar', 'Fast & Furious', 'Pirates of the Caribbean'],
+    'music': ['Queen', 'The Beatles', 'Coldplay'],
+    'sports': ['football', 'basketball', 'tennis']}
+# Видаліть з цього списку sports та додайте новий ключ 'serials' де значенням будуть ваші улюблені серіали.
+favorites.pop('sports')
+favorites.update({'serials': ['Invincible', 'Netrunner', 'Berserk', 'Blue Eyed Samurai']})
