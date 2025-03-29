@@ -84,3 +84,4 @@ def example_6(dictionary_object):
 
     for value in dictionary_object.values():
         print(value)
+
