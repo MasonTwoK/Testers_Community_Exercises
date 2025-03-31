@@ -21,6 +21,7 @@ our_dict_3 = {
         "key_9": [1, 2, 3]
     }
 
+
 def example_1(dictionary_object):
     # print(dictionary_object['key_4'])  # KeyError: 'key_4'
     print(dictionary_object['key_1'])  # value 1
