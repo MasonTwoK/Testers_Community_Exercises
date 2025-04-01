@@ -4,10 +4,10 @@ def add(num_1, num_2):
     return result
 
 
-def exp(number):
-    return number ** 2
+def exp(number, exponent=2):
+    return number ** exponent
 
 
-our_result = add(3, 5)
-our_exp = exp(add(3, 5))
-print(our_exp)
+def division(first_num, second_num):
+    result = first_num/second_num
+    return result
