@@ -40,8 +40,12 @@ assert calculator.get('-')(2, 1) == 1, 'Result is not equal 1'
 assert calculator.get('*')(1, 2) == 2, 'Result is not equal 2'
 assert calculator.get('/')(8, 2) == 4, 'Result is not equal 4'
 
-# Задача 2: Напишіть Лямбда функцію яка нічого не приймає,
-# а повертає 'Привіт спільното' a = lambda : 'Привіт спільнота' print(a())
-
+# Задача 2: Напишіть Лямбда функцію яка нічого не приймає, а повертає 'Привіт спільното'
+a = lambda: 'Привіт спільнота'
+print(a())
 
 # Задача 3: Зробіть лямбда функцію яка перевіряє чи число більше нуля чи менше і виводить повідомлення.
+more_or_less_than_zero_message = lambda number: 'Yes' if number > 0 else ('No' if number < 0 else 'Number is zero')
+print(more_or_less_than_zero_message(1))
+print(more_or_less_than_zero_message(-1))
+print(more_or_less_than_zero_message(0))
