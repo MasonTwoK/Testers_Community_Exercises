@@ -32,4 +32,3 @@ def example_2(grades_list):
         print("We haven't bad marks")
 
     print('The end.')
-
