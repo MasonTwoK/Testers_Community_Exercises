@@ -21,7 +21,6 @@ for number in numbers:
         continue
 else:
     print('такого числа немає')
-    # Я вірно розумію, що else після loop завжди буде відпрацьовувати, якщо немає break?
 
 
 # Задача 3: Напишіть програму, яка використовує цикл for для перебору списку чисел.
@@ -32,3 +31,24 @@ for number in numbers:
         continue
     else:
         total += number
+
+
+# **Додаткові завдання:**
+# Задача 4
+# У вас є список слів у різному регістрі.
+# * Якщо у списку є число, то ви зупиняєте роботу циклу і виводите повідомлення.
+# * Якщо вам попадається слово, в якого перша буква велика, то ви нічого з ним не робите.
+# * Якщо ж якийсь інший випадок, то це слово відправляєте у функцію, яка повертає вам це ж слово,
+# але написане у форматі, де перша літера велика, а решта маленькі, після чого ви виводите на екран це слово.
+list_of_words = ["UK", "London", "city", 221, "Baker Street"]
+
+for word in list_of_words:
+    if type(word) is type(1):
+        print("Цикл закінчено.")
+        break
+    elif word == word.capitalize():
+        continue
+    else:
+        capitalize_function = lambda word: word.capitalize()
+        result = capitalize_function(word)
+        print(result)
