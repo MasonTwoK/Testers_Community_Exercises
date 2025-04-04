@@ -32,3 +32,16 @@ for iterator in nums_list:
 
 print(f"List with nums: {nums_list}")
 print(f"List with pows: {pows_list}")
+
+# Задача 4: Напишіть програму яка проходить по списку з словами та виводить кількість букв у кожному слові.
+# і якщо слово більше десяти букв то виводить повідомлення "Ого яке довге слово"
+# якщо слово менше 4 букв то виводить повідомлення "Ого яке коротке слово".
+list_of_word = ['cat', 'dog', 'bird', 'snake', 'hippokapibara']
+
+for word in list_of_word:
+    word_size = len(word)
+    print(word_size)
+    if word_size > 10:
+        print("Ого яке довге слово")
+    if word_size < 4:
+        print("Ого яке коротке слово")
