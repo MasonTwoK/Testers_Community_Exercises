@@ -22,3 +22,29 @@ countdown_num = 10
 while countdown_num > 0:
     print(countdown_num)
     countdown_num -= 1
+
+
+# **Додаткові завдання:**
+# Задача 4: Цього разу Ви вирішили написати Гру. Ви загадуєте число і користувач намагається його вгадати вводячи дані.
+# Якщо він ввів менше загаданого числа то ви виводите повідомлення "Загадане число більше ніж ви вказали"
+# і відповідно якщо він ввів менше то ви пишете "Загадане число менше ніж ви вказали""
+# Коли користувач відгадає число, виведіть кількість спроб яку він використав та привітайте його з виграшом.
+secret_number = 1
+attempt_counter = 0
+user_number = None
+
+while not (secret_number == user_number):
+    user_number = int(input("Введіть своє число: "))
+    if user_number < secret_number:
+        attempt_counter += 1
+        print("Загадане число більше ніж ви вказали")
+    if user_number > secret_number:
+        attempt_counter += 1
+        print("Загадане число менше ніж ви вказали")
+attempt_counter += 1
+
+message_congrats = "\nВітаю, ви відгадали!"
+message_attempt = "Кількість використаних спроб: "
+result = message_attempt + str(attempt_counter) + message_congrats
+
+print(result)
