@@ -8,10 +8,10 @@ def sub_numbers(num_1, num_2):
 # і "Odd", якщо число непарне.
 def check_even_odd(number):
     if number % 2 == 0:
-        print("Even")
+        return "Even"
     else:
-        print("Odd")
-    return 0
+        return "Odd"
+
 
 
 # Задача 3: Напишіть функцію find_max, яка приймає три числа num1, num2, та num3 і повертає найбільше з них.
