@@ -5,6 +5,7 @@ assert input_string, 'Inserted string was empty.'
 
 print("input_string converted to bool type is", input_string)
 
+
 # Задача 2: Попросіть користувача ввести три числа, які в сумі дають 100, і перевірте це за допомогою assert.
 # Якщо користувач ввів неправильно, виведіть йому помилку з написом на ваш розсуд.
 print("Welcome to Total in 100..")
@@ -24,3 +25,41 @@ pass_b = input("Enter second password: ")
 
 assert pass_a == pass_b, "Passwords are different."
 print("Check is complete. Passwords are same.")
+
+
+# Задача 4: До вас звернулась ваша подруга Марина, викладачка англійської мови.
+# Вона викладає в новітній обладнаній школі у місті Вінниця, в них є комп'ютери на яких учні можуть проходити тести.
+# І ваша задача написати тест який після кожного питання буде виводи кількість балів набраних учнем.
+# Питань повинно бути п'ять, питання виглядають в такому вигляді на екрані з'являється слово написане українською мовою
+# і студент має ввести його переклад на англійській мові.
+# Якщо переклад правильний він отримує плюс один бал, якщо ні то програма повинна зламатись.
+# В кінці тесту, тобто після п'ятого питання ви повинні зламати тест(зробіть AssertionError) після виведення балів,
+# що б учні не могли ніяк змінити свій результат.
+score = 0
+
+translate = input("ручка")
+assert translate == "pen"
+score += 1
+print(score)
+
+translate = input("олівець")
+assert translate == "pencil"
+score += 1
+print(score)
+
+translate = input("зошит")
+assert translate == "notebook"
+score += 1
+print(score)
+
+translate = input("стіл")
+assert translate == "table"
+score += 1
+print(score)
+
+translate = input("стілець")
+assert translate == "chair"
+score += 1
+print(score)
+
+assert False
