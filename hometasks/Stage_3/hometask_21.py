@@ -32,13 +32,19 @@ calculator = {
     '+': lambda a, b: a + b,
     '-': lambda a, b: a - b,
     '*': lambda a, b: a * b,
-    '/': lambda a, b: a / b
+    '/': lambda a, b: a / b,
+    'pow': lambda a, b: a ** b,
+    'sqrt': lambda a: a ** 0.5,
+    'Hi': 'Hi. Welcome to calculator'
 }
 
 assert calculator.get('+')(1, 2) == 3, 'Result is not equal 3'
 assert calculator.get('-')(2, 1) == 1, 'Result is not equal 1'
 assert calculator.get('*')(1, 2) == 2, 'Result is not equal 2'
 assert calculator.get('/')(8, 2) == 4, 'Result is not equal 4'
+assert calculator.get('pow')(2, 3) == 8, 'Result is not equal 8'
+assert calculator.get('sqrt')(81) == 9, 'Result is not equal 9'
+assert calculator.get('Hi') == 'Hi. Welcome to calculator', 'Result is not equal: Hi. Welcome to calculator'
 
 # Задача 2: Напишіть Лямбда функцію яка нічого не приймає, а повертає 'Привіт спільното'
 a = lambda: 'Привіт спільнота'
@@ -49,3 +55,19 @@ more_or_less_than_zero_message = lambda number: 'Yes' if number > 0 else ('No' i
 print(more_or_less_than_zero_message(1))
 print(more_or_less_than_zero_message(-1))
 print(more_or_less_than_zero_message(0))
+
+
+# **Додаткові завдання:**
+# Задача 4: Розширить калькулятор написаний у відео такими математичними діями:
+# * піднесення до ступінь,
+# * зняття коріння від числа.
+# * І привітанням на ваш смак по ключу 'Hi'
+calculator = {
+    '+': lambda a, b: a + b,
+    '-': lambda a, b: a - b,
+    '*': lambda a, b: a * b,
+    '/': lambda a, b: a / b,
+    'pow': lambda a, b: a ** b,
+    'sqrt': lambda a: a ** 0.5,
+    'Hi': 'Hi. Welcome to calculator'
+}
