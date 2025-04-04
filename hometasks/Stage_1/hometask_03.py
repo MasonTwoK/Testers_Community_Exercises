@@ -1,5 +1,6 @@
 # Задача 1: Попросіть користувача ввести рядок і перевірте,
 # чи є заданий рядок порожнім, конвертувавши його в булеве значення.
+
 input_string = bool(input("Insert your string: "))
 assert input_string, 'Inserted string was empty.'
 
@@ -8,6 +9,7 @@ print("input_string converted to bool type is", input_string)
 
 # Задача 2: Попросіть користувача ввести три числа, які в сумі дають 100, і перевірте це за допомогою assert.
 # Якщо користувач ввів неправильно, виведіть йому помилку з написом на ваш розсуд.
+
 print("Welcome to Total in 100..")
 
 num_1 = int(input("Enter your 1st number: "))
@@ -20,6 +22,7 @@ assert num_1 + num_2 + num_3 == 100, 'Total is not equal to 100'
 # Необхідно перевірити, чи обидва введені паролі співпадають.
 # Якщо паролі співпадають, вивести повідомлення 'пароль вірний'.
 # Якщо паролі не співпадають, користувач отримує помилку.
+
 pass_a = input("Enter first password: ")
 pass_b = input("Enter second password: ")
 
@@ -37,27 +40,27 @@ print("Check is complete. Passwords are same.")
 # що б учні не могли ніяк змінити свій результат.
 score = 0
 
-translate = input("ручка")
+translate = input("ручка\n")
 assert translate == "pen"
 score += 1
 print(score)
 
-translate = input("олівець")
+translate = input("олівець\n")
 assert translate == "pencil"
 score += 1
 print(score)
 
-translate = input("зошит")
+translate = input("зошит\n")
 assert translate == "notebook"
 score += 1
 print(score)
 
-translate = input("стіл")
+translate = input("стіл\n")
 assert translate == "table"
 score += 1
 print(score)
 
-translate = input("стілець")
+translate = input("стілець\n")
 assert translate == "chair"
 score += 1
 print(score)
