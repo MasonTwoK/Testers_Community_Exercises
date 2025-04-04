@@ -22,3 +22,12 @@ def find_max(num_1, num_2, num_3):
     max_num = max(list_of_nums)
 
     return max_num
+
+
+# **Додаткові завдання:**
+# Задача 4
+# Напишіть функцію яка розв'язує квадратні рівняння.
+def power_func(x):
+    y = x ** 2
+    return y
+
