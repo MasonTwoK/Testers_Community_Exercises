@@ -18,3 +18,10 @@ print(result)
 # якщо рядок є паліндромом, то assert має пройти; якщо ні, має бути виведено відповідне повідомлення про помилку.
 entered_string = input("Enter palindrome string: ")
 assert entered_string == entered_string[::-1], "Entered string is not palindrome"
+
+
+# **Додаткові завдання:**
+
+# Задача 4
+# all letters = 'Жебракують філософи при ґанку церкви в Гадячі, ще й шатро їхнє п'яне знаємо'
+# Використовуючи зміну all letters напишіть своє ім'я.

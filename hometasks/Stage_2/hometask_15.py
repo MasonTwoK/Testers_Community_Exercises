@@ -41,3 +41,8 @@ while main_logic_switch:
         else: print("Incorrect input. Try again..")
 
 dict_of_students = dict(students_list)
+
+
+# **Додаткові завдання:**
+# Задача 4
+# Створіть записник де ключе буде прізвище, а значенням такі дані(день народження, місце проживання, та контактні дані)
