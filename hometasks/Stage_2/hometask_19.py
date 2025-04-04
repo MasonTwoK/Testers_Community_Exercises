@@ -13,7 +13,6 @@ def check_even_odd(number):
         return "Odd"
 
 
-
 # Задача 3: Напишіть функцію find_max, яка приймає три числа num1, num2, та num3 і повертає найбільше з них.
 def find_max(num_1, num_2, num_3):
     list_of_nums = [num_1, num_2, num_3]
