@@ -6,7 +6,8 @@ for index in range(len(numbers_list)):
 result = f"Slice of numbers starting second element with step 2: {numbers_list[1::2]}"
 print(result)
 
-# Задача 2 Створіть рядок зі слів "Python is awesome!" і виведіть тільки слово "awesome" у верхньому регістрі з використанням зрізу.
+# Задача 2 Створіть рядок зі слів "Python is awesome!" і виведіть тільки слово "awesome" у верхньому регістрі
+# з використанням зрізу.
 string = "Python is awesome!"
 result = string[10:17].upper()
 print(result)
@@ -21,7 +22,8 @@ assert entered_string == entered_string[::-1], "Entered string is not palindrome
 
 
 # **Додаткові завдання:**
-
 # Задача 4
-# all letters = 'Жебракують філософи при ґанку церкви в Гадячі, ще й шатро їхнє п'яне знаємо'
 # Використовуючи зміну all letters напишіть своє ім'я.
+all_letters = "Жебракують філософи при ґанку церкви в Гадячі, ще й шатро їхнє п'яне знаємо"
+all_letters = "Вільям"
+print(all_letters)
