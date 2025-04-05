@@ -63,10 +63,22 @@ result = str(number)[-2]
 
 # Задача 6
 # Дано тризначне число. Знайдіть суму його цифр. Вирішіть цю задачу декількома способами.
+# Спосіб 1:
 number = 111
 total = 0
 for number in str(number):
     total += int(number)
+
+
+# Спосіб 2:
+total = 0
+number_1 = number % 10
+total += number_1
+number_2 = ((number % 100) - number_1) / 10
+total += number_2
+number_3 = (number - (number % 100)) / 100
+total += number_3
+print(total)
 
 
 # Задача 7
@@ -76,4 +88,3 @@ m = 111
 result = m // n
 if (m % n) != 0:
     result += 1
-
