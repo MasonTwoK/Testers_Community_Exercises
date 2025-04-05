@@ -71,6 +71,7 @@ for number in str(number):
 
 
 # Спосіб 2:
+number = 111
 total = 0
 number_1 = number % 10
 total += number_1
@@ -78,7 +79,6 @@ number_2 = ((number % 100) - number_1) / 10
 total += number_2
 number_3 = (number - (number % 100)) / 100
 total += number_3
-print(total)
 
 
 # Задача 7
