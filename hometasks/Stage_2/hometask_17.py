@@ -84,3 +84,4 @@ elif user_answer < expressions.get('exp 1')[1]:
     print('Відповідь повинна бути більша.')
 elif user_answer > expressions.get('exp 1')[1]:
     print('Відповідь повинна бути менша.')
+
