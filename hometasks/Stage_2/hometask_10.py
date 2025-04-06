@@ -43,3 +43,4 @@ for word in total_tuple:
 
 result_1 = tuple(list_result_1)
 result_2 = tuple(list_result_2)
+
