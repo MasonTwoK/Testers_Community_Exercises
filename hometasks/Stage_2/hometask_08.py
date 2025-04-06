@@ -75,3 +75,9 @@ for word in lowered_words:
 # 'https://prodtea.com.ua ,  https://prod_dim.com.ua'
 # потрібно зробити ось таку
 # 'https://qatea.com.ua ,  https://qa_dim.com.ua'
+prod_url_tuple = ('https://prodtea.com.ua', 'https://prod_dim.com.ua')
+qa_url_list = []
+
+for prod_url in prod_url_tuple:
+    qa_url = prod_url.replace('prod', 'qa')
+    qa_url_list.append(qa_url)
