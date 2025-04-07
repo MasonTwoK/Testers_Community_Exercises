@@ -22,7 +22,7 @@ our_dict_3 = {
     }
 
 
-def example_1(dictionary_object):
+def example_1_get(dictionary_object):
     # print(dictionary_object['key_4'])  # KeyError: 'key_4'
     print(dictionary_object['key_1'])  # value 1
     print(dictionary_object.get('key_4'))  # None
@@ -31,7 +31,7 @@ def example_1(dictionary_object):
     print(dictionary_object)
 
 
-def example_2(dictionary_object):
+def example_2_update(dictionary_object):
     print(dictionary_object.setdefault("key_5", "value_5"))  # updates dictionary_object with a new pair of key:value
     print(dictionary_object.setdefault("key_1", "value_6"))  # Value for key_1 won't change by getting 2 parameters
     print(dictionary_object)
