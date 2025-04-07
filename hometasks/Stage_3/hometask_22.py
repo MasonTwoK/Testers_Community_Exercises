@@ -31,7 +31,7 @@ for number in numbers:
         continue
     else:
         total += number
-
+print(total)
 
 # **Додаткові завдання:**
 # Задача 4
