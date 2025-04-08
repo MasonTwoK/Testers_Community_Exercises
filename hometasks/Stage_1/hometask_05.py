@@ -30,7 +30,7 @@ words_string = input("Enter words: ")
 words_list = words_string.split(" ")
 
 result = len(words_list)
-print(f"Amount of entered words: {result}")
+print("Amount of entered words:", result)
 
 # **Додаткові завдання:**
 
