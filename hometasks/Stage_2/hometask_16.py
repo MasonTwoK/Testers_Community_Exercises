@@ -4,14 +4,14 @@ d = {'name': 'John Doe', 'age': 30,
      'email': 'johndoe@example.com'}
 # Попросіть користувача ввести ключ, який він бажає видалити, і видаліть цей елемент зі словника.
 # Та виведіть на екран змінений словник.
-app_switch = True
-while app_switch:
+
+while True:
     key = input("Enter the key of pair you want to delete: ")
 
     if key in d.keys():
         d.pop(key)
         print(d)
-        app_switch = False
+        break
     else:
         print("Wrong key was entered! Try again..")
 
