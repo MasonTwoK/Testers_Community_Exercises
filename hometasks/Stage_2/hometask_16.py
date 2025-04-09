@@ -5,15 +5,15 @@ d = {'name': 'John Doe', 'age': 30,
 # Попросіть користувача ввести ключ, який він бажає видалити, і видаліть цей елемент зі словника.
 # Та виведіть на екран змінений словник.
 
-while True:
-    key = input("Enter the key of pair you want to delete: ")
-
-    if key in d.keys():
-        d.pop(key)
-        print(d)
-        break
-    else:
-        print("Wrong key was entered! Try again..")
+# while True:
+#     key = input("Enter the key of pair you want to delete: ")
+#
+#     if key in d.keys():
+#         d.pop(key)
+#         print(d)
+#         break
+#     else:
+#         print("Wrong key was entered! Try again..")
 
 
 # Задача 2
@@ -53,33 +53,75 @@ contacts = {
 }
 
 
+def contacts_welcome_dialog():
+    print('Виберіть число згідно опцій роботи з контактами:')
+    print("1 - Додати новий контакт")
+    print("2 - Подивитись контакт")
+    print("3 - Оновити старий контакт")
+    print("4 - Видалити контакт")
+
+    return 0
+
+
 def contacts_keys_presenter(dict_contacts):
     for key in dict_contacts.keys():
         print(key)
-    key = input("Виберіть імʼя конткату з переліку, що вище: ")
+    while True:
+        key = input("Виберіть імʼя (прізвище) конткату з переліку, що вище: ")
+        if key in contacts.keys():
+            break
+        else:
+            print("Помилка! Імʼя (прізвища), що ви ввели не має в переліку контактів..")
 
     return key
 
 
-print('Виберіть число згідно опцій роботи з контактами:\n',
-      "1 - Додати новий контакт\n",
-      "2 - Подивитись контакт\n",
-      "3 - Оновити старий контакт\n",
-      "4 - Видалити контакт\n")
+def contacts_create_contact():
+    contacts_key = input("Введіть імя (прізвище) контакту: ")
 
+    value_birth_date = input("Введіть день народження контакту: ")
+    value_city = input("Введіть місто конткакту: ")
+    value_phone = input("Введіть телефон контакту: ")
+    value_email = input("Введіть електронну пошту контакту: ")
+    contacts_value = [value_birth_date, value_city, [value_phone, value_email]]
+
+    contacts.update({contacts_key: contacts_value})
+
+    return 0
+
+
+def contacts_update_existed_contact(contact_value):
+    while True:
+        print("1 - Дата народження")
+        print("2 - Місто")
+        print("3 - Телефон")
+        print("4 - Електронна пошта")
+
+        user_selection = input("Введіть номер поля, яке ви хочете змінити: ")
+        if user_selection == '1':
+            contact_value[0] = input("Введіть новий день народження контакту: ")
+            break
+        elif user_selection == '2':
+            contact_value[1] = input("Введіть нове місто контакту: ")
+            break
+        elif user_selection == '3':
+            contact_value[2][0] = input("Введіть новий телефон контакту: ")
+            break
+        elif user_selection == '4':
+            contact_value[2][1] = input("Введіть нову електронну пошту контакту: ")
+            break
+        else:
+            print("Не вірний ввід ввід.. Спробуйте ще раз")
+
+    contacts.update({contact_key: contact_value})
+
+
+contacts_welcome_dialog()
 while True:
     user_answer = input("Введіть ваш вибір: ")
 
     if user_answer == '1':
-        contacts_key = input("Введіть імя (прізвище) контакту: ")
-
-        value_birth_date = input("Введіть день народження контакту: ")
-        value_city = input("Введіть місто конткакту: ")
-        value_phone = input("Введіть телефон контакту: ")
-        value_email = input("Введіть електронну пошту контакту: ")
-        contacts_value = [value_birth_date, value_city, [value_phone, value_email]]
-
-        contacts.update({contacts_key: contacts_value})
+        contacts_create_contact()
         break
 
     elif user_answer == '2':
@@ -93,28 +135,7 @@ while True:
         contact_key = contacts_keys_presenter(contacts)
         contact_value = contacts.get(contact_key)
 
-        while True:
-            print(" 1 - Дата народження\n", "2 - Місто\n", "3 - Телефон\n", "4 - Електронна пошта\n")
-            user_selection = input("Введіть номер поля, яке ви хочете змінити: ")
-
-            if user_selection == '1':
-                contact_value[0] = input("Введіть новий день народження контакту: ")
-                break
-            elif user_selection == '2':
-                contact_value[1] = input("Введіть нове місто контакту: ")
-                break
-            elif user_selection == '3':
-                contact_value[2][0] = input("Введіть новий телефон контакту: ")
-                break
-            elif user_selection == '4':
-                contact_value[2][1] = input("Введіть нову електронну пошту контакту: ")
-                break
-            else:
-                print("Не вірний ввід ввід.. Спробуйте ще раз")
-                continue
-
-        contacts.update({contact_key: contact_value})
-        print(contacts)
+        contacts_update_existed_contact(contact_value)
         break
 
     elif user_answer == '4':
@@ -124,4 +145,3 @@ while True:
 
     else:
         print("Не вірний ввід ввід.. Спробуйте ще раз")
-        continue
