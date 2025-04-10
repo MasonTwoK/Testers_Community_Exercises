@@ -39,8 +39,10 @@ my_list = [2, -100, 30, 15.5, 32]
 # Якщо ж він введе щось третє, то виведіть йому повідомлення 'некоректний ввід'
 user_input = input("Введіть 'спад' або 'виріст': ")
 if user_input.lower() == 'спад':
-    my_list.sort(reverse=True)
+    result = my_list.sort(reverse=True)
+    print(result)
 elif user_input.lower() == 'виріст':
-    my_list.sort()
+    result = my_list.sort()
+    print(result)
 else:
     print('некоректний ввід')
