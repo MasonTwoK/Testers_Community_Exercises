@@ -33,15 +33,13 @@ secret_number = 1
 attempt_counter = 0
 user_number = None
 
-while not (secret_number == user_number):
+while not secret_number == user_number:
     user_number = int(input("Введіть своє число: "))
+    attempt_counter += 1
     if user_number < secret_number:
-        attempt_counter += 1
         print("Загадане число більше ніж ви вказали")
     if user_number > secret_number:
-        attempt_counter += 1
         print("Загадане число менше ніж ви вказали")
-attempt_counter += 1
 
 message_congrats = "\nВітаю, ви відгадали!"
 message_attempt = "Кількість використаних спроб: "
