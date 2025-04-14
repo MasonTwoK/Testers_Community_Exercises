@@ -1,3 +1,51 @@
+# Задача 4: Пам'ятаєте задачу з попереднього уроку, про вашу подругу вчительку.
+# Тепер Ви можете покращити цю програму використовуючи if, else.
+# Умова задачі:
+# * Питань повинно бути п'ять, питання виглядають в такому вигляді на екрані з'являється слово написане
+# українською мовою і студент має ввести його переклад на англійській мові.
+# * Якщо переклад правильний він отримує плюс один бал і повідомлення що він вірно відповів.
+# * Якщо ж відповідь неправильна. то він не отримує балів, але отримує повідомлення що відповідь не правильна
+# і йде до настпуного питання.
+# * В кінці тесту ви виводите кількість балів. І дякую за приділений час.
+score = 0
+
+translate = input("ручка\n")
+if translate == "pen":
+    score += 1
+    print("Answer is correct")
+else:
+    print("Answer is wrong")
+
+translate = input("олівець\n")
+if translate == "pencil":
+    score += 1
+    print("Answer is correct")
+else:
+    print("Answer is wrong")
+
+translate = input("зошит\n")
+if translate == "notebook":
+    score += 1
+    print("Answer is correct")
+else:
+    print("Answer is wrong")
+
+translate = input("стіл\n")
+if translate == "table":
+    score += 1
+    print("Answer is correct")
+else:
+    print("Answer is wrong")
+
+translate = input("стілець\n")
+if translate == "chair":
+    score += 1
+    print("Answer is correct")
+else:
+    print("Answer is wrong")
+
+print(score, " Дякую за приділений час")
+
 # Задача 1: Створіть програму, яка запитує у користувача його вік.
 # Якщо вік користувача менше 18 років, програма повинна вивести "Ви ще надто молоді",
 # якщо вік рівний або більше 18 років, то повинна вивести "Ласкаво просимо!".
@@ -89,4 +137,4 @@ if translate == "chair":
 else:
     print("Answer is wrong")
 
-print(str(score) + " Дякую за приділений час")
+print(score, " Дякую за приділений час")

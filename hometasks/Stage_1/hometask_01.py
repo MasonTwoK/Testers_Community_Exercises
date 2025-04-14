@@ -19,5 +19,6 @@ print(int_type)
 # але умова така що далі ця зміна буде використовуватись програмою яка працює тільки з типом даних str.
 # Вирішіть проблему. Та виведіть тип змінної та її результат.
 age = 21
-result = str(age)
-print(result)
+str_value = str(age)
+value_type = type(str_value)
+print(value_type, str_value)

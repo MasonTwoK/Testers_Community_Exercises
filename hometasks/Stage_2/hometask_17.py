@@ -1,7 +1,6 @@
 # Задача 1: Напишіть програму, яка запитує у користувача суму в одній валюті (наприклад, долари)
 # та конвертує її в іншу валюту (наприклад, євро), використовуючи поточний курс обміну.
 # Якщо користувач вибирає USD, конвертувати в EUR; якщо вибирає EUR, конвертувати в USD.
-option_switch = True
 option_choice = 0
 exchange_rate = {
     'USD/EUR': 0.92,
@@ -18,19 +17,20 @@ exchange_rate_keys = tuple(exchange_rate.keys())
 
 print('Welcome to currency USD/EUR, EUR/USD converter app!\n')
 print(option_message[0])
-while option_switch:
+while True:
     option_choice = input(str(option_message[1] + option_message[2] + option_message[3]))
 
-    if str(1) == option_choice:
-        option_switch = False
-    elif str(2) == option_choice:
-        option_switch = False
+    if option_choice == '1':
+        break
+    elif option_choice == '2':
+        break
     else:
         print("Input incorrect. Select between options '1' & '2'..")
 
 option_choice = int(option_choice)-1  # Is it okay that I resave value like this?
 amount_of_currency = input(f'Enter amount of {currency[option_choice]}: ')
 result = float(amount_of_currency) * exchange_rate[exchange_rate_keys[option_choice]]
+print(result)
 
 
 # Задача 2: Напишіть програму, яка приймає температуру в градусах Цельсія
