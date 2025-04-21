@@ -1,19 +1,13 @@
-print(-21 % 7)
-
-
-
 numbers = [5, 21, -21, 0, -2, 4, 3]
-
-
 
 # Задача 1: Створіть програму, яка перебирає список чисел.
 # Використовуючи умовний оператор, використайте команду continue, щоб пропустити обробку чисел, які менше за 0.
 # Використайте команду pass для ігнорування нуля.
 for number in numbers:
     if number < 0:
-        pass
-    else:
         continue
+    if number == 0:
+        pass
 
 
 # Задача 2: Створіть програму, яка шукає перше число в списку, яке ділиться на 7 без остачі.
@@ -48,6 +42,12 @@ print(total)
 # але написане у форматі, де перша літера велика, а решта маленькі, після чого ви виводите на екран це слово.
 list_of_words = ["UK", "London", "city", 221, "Baker Street"]
 
+
+def word_capitalize(string):
+    capitalized_word = string.capitalize()
+    return capitalized_word
+
+
 for word in list_of_words:
     if type(word) is type(1):
         print("Цикл закінчено.")
@@ -55,6 +55,5 @@ for word in list_of_words:
     elif word == word.capitalize():
         continue
     else:
-        capitalize_function = lambda word: word.capitalize()
-        result = capitalize_function(word)
+        result = word_capitalize(word)
         print(result)
