@@ -1,33 +1,4 @@
 
-# **Додаткові завдання:**
-# Задача 4
-# У вас є список слів у різному регістрі.
-# * Якщо у списку є число, то ви зупиняєте роботу циклу і виводите повідомлення.
-# * Якщо вам попадається слово, в якого перша буква велика, то ви нічого з ним не робите.
-# * Якщо ж якийсь інший випадок, то це слово відправляєте у функцію, яка повертає вам це ж слово,
-# але написане у форматі, де перша літера велика, а решта маленькі, після чого ви виводите на екран це слово.
-list_of_words = ["UK", "London", "city", 221, "Baker Street", "23"]
-
-
-def word_capitalize(string):
-    capitalized_word = string.capitalize()
-    return capitalized_word
-
-
-for word in list_of_words:
-    if type(word) is int:
-        print("Цикл закінчено.")
-        break
-    elif word.isdigit():
-        print("Цикл закінчено.")
-        break
-    elif word == word.capitalize():
-        continue
-    else:
-        result = word_capitalize(word)
-        print(result)
-
-
 numbers = [5, 21, -21, 0, -2, 4, 3]
 
 # Задача 1: Створіть програму, яка перебирає список чисел.
@@ -63,6 +34,7 @@ for number in numbers:
         total += number
 print(total)
 
+
 # **Додаткові завдання:**
 # Задача 4
 # У вас є список слів у різному регістрі.
@@ -70,8 +42,7 @@ print(total)
 # * Якщо вам попадається слово, в якого перша буква велика, то ви нічого з ним не робите.
 # * Якщо ж якийсь інший випадок, то це слово відправляєте у функцію, яка повертає вам це ж слово,
 # але написане у форматі, де перша літера велика, а решта маленькі, після чого ви виводите на екран це слово.
-list_of_words = ["UK", "London", "city", 221, "Baker Street"]
-
+list_of_words = ["UK", "London", "city", 221, "Baker Street", "23"]
 
 def word_capitalize(string):
     capitalized_word = string.capitalize()
@@ -79,10 +50,7 @@ def word_capitalize(string):
 
 
 for word in list_of_words:
-    if type(word) is int:
-        print("Цикл закінчено.")
-        break
-    elif word.isdigit():
+    if type(word) is int or word.isdigit():
         print("Цикл закінчено.")
         break
     elif word == word.capitalize():
