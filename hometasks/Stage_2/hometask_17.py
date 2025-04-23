@@ -6,19 +6,19 @@ exchange_rate = {
     'USD/EUR': 0.92,
     'EUR/USD': 1.08
 }
-option_message = (
-    'Select conversion operation option..',
-    'Press button "1" for converting USD to EUR\n',
-    'Press button "2" for converting EUR to USD\n',
-    'Enter your option: ')
+
 currency = ('USD', 'EUR')
+
+option_text = ('Select conversion operation option..\n'
+               'Press button "1" for converting USD to EUR\n'
+               'Press button "2" for converting EUR to USD\n'
+               'Enter your option: ')
 
 exchange_rate_keys = tuple(exchange_rate.keys())
 
 print('Welcome to currency USD/EUR, EUR/USD converter app!\n')
-print(option_message[0])
 while True:
-    option_choice = input(str(option_message[1] + option_message[2] + option_message[3]))
+    option_choice = input(option_text)
 
     if option_choice == '1':
         break
