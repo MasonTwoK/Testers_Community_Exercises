@@ -50,7 +50,7 @@ def word_capitalize(string):
 
 
 for word in list_of_words:
-    if type(word) is int or word.isdigit():
+    if type(word) == int or word.isdigit():
         print("Цикл закінчено.")
         break
     elif word == word.capitalize():
