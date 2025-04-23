@@ -1,35 +1,19 @@
 # Задача 1: Напишіть програму, яка запитує у користувача суму в одній валюті (наприклад, долари)
 # та конвертує її в іншу валюту (наприклад, євро), використовуючи поточний курс обміну.
 # Якщо користувач вибирає USD, конвертувати в EUR; якщо вибирає EUR, конвертувати в USD.
-option_choice = 0
-exchange_rate = {
-    'USD/EUR': 0.92,
-    'EUR/USD': 1.08
-}
-
-currency = ('USD', 'EUR')
-
 option_text = ('Select conversion operation option..\n'
                'Press button "1" for converting USD to EUR\n'
                'Press button "2" for converting EUR to USD\n'
                'Enter your option: ')
 
-exchange_rate_keys = tuple(exchange_rate.keys())
-
 print('Welcome to currency USD/EUR, EUR/USD converter app!\n')
-while True:
-    option_choice = input(option_text)
+option_choice = input(option_text)
+amount_of_currency = input(f'Enter amount of money: ')
+if option_choice == '1':
+    result = float(amount_of_currency) * 0.92
+elif option_choice == '2':
+    result = float(amount_of_currency) * 1.08
 
-    if option_choice == '1':
-        break
-    elif option_choice == '2':
-        break
-    else:
-        print("Input incorrect. Select between options '1' & '2'..")
-
-option_choice = int(option_choice)-1  # Is it okay that I resave value like this?
-amount_of_currency = input(f'Enter amount of {currency[option_choice]}: ')
-result = float(amount_of_currency) * exchange_rate[exchange_rate_keys[option_choice]]
 print(result)
 
 
