@@ -64,7 +64,7 @@ Everybody knows
 Catch me or I go Houdini"""
 
 user_input = input('Вкажіть слово: ')
-result = base_text.count(user_input)
+result = base_text.lower().count(user_input.lower())
 print(result)
 
 
