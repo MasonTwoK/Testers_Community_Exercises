@@ -1,7 +1,10 @@
 # Задача 1: Напишіть програму, яка запитує у користувача суму в одній валюті (наприклад, долари)
 # та конвертує її в іншу валюту (наприклад, євро), використовуючи поточний курс обміну.
 # Якщо користувач вибирає USD, конвертувати в EUR; якщо вибирає EUR, конвертувати в USD.
-option_text = """Select conversion operation option..\nPress button "1" for converting USD to EUR\nPress button "2" for converting EUR to USD\nEnter your option:"""
+option_text = """Select conversion operation option..
+Press button "1" for converting USD to EUR
+Press button "2" for converting EUR to USD\n
+Enter your option:"""
 
 print('Welcome to currency USD/EUR, EUR/USD converter app!\n')
 option_choice = input(option_text)
