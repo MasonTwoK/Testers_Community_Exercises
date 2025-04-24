@@ -54,20 +54,18 @@ print(f"Length of string by using length method: {length_of_string}")
 # Задача 4: Напишіть програму яка перевіряє рядок на вказане користувачем слово
 # і підраховує скільки разів воно зустрічається, якщо слово зустрічається в різному регістрі ви рахуєте його два рази.
 # Тобто слів "Хліб" та слово "хліб" це одне і теж слово.
-string = ''
-lowered_words = []
-counter = 0
-list_of_word = string.split(' ')
-
-for word in list_of_word:
-    lowered_words.append(word.lower())
+base_text = """I come and I go
+Tell me all the ways you need me
+I'm not here for long
+Catch me or I go Houdini
+I come and I go
+Prove you got the right to please me
+Everybody knows
+Catch me or I go Houdini"""
 
 user_input = input('Вкажіть слово: ')
-user_input_lowered = user_input.lower()
-
-for word in lowered_words:
-    if user_input_lowered == word:
-        counter += 1
+result = base_text.count(user_input)
+print(result)
 
 
 # Задача 5: До вас звернувся ваш друг тестувальник за допомогою,
