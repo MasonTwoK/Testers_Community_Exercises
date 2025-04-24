@@ -54,11 +54,8 @@ contacts = {
 
 
 def contacts_welcome_dialog():
-    print('Виберіть число згідно опцій роботи з контактами:')
-    print("1 - Додати новий контакт")
-    print("2 - Подивитись контакт")
-    print("3 - Оновити старий контакт")
-    print("4 - Видалити контакт")
+    welcome_dialog_text = """Виберіть число згідно опцій роботи з контактами:\n1 - Додати новий контакт\n2 - Подивитись контакт\n3 - Оновити старий контакт\n4 - Видалити контакт"""
+    print(welcome_dialog_text)
 
     return 0
 
@@ -92,10 +89,8 @@ def contacts_create_contact():
 
 def contacts_update_existed_contact(contact_value):
     while True:
-        print("1 - Дата народження")
-        print("2 - Місто")
-        print("3 - Телефон")
-        print("4 - Електронна пошта")
+        update_existed_contact_dialog = """1 - Дата народження\n2 - Місто\n3 - Телефон\n4 - Електронна пошта"""
+        print(update_existed_contact_dialog)
 
         user_selection = input("Введіть номер поля, яке ви хочете змінити: ")
         if user_selection == '1':
