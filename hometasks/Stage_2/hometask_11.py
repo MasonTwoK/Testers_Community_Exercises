@@ -25,5 +25,5 @@ assert entered_string == entered_string[::-1], "Entered string is not palindrome
 # Задача 4
 # Використовуючи зміну all letters напишіть своє ім'я.
 all_letters = "Жебракують філософи при ґанку церкви в Гадячі, ще й шатро їхнє п'яне знаємо"
-all_letters = "Вільям"
-print(all_letters)
+result = all_letters[37].upper() + all_letters[12:14] + all_letters[9] + all_letters[42] + all_letters[-2]  # Вільям
+print(result)
