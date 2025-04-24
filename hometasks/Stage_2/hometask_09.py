@@ -37,10 +37,11 @@ print("Довжина: " + str(length) + ", Ширина: " + str(width) + ", П
 # Ім'я, прізвище, клас, день та місяць народження, улюблений предмет.
 # Ім'я та Прізвище повинно бути у верхньому регістрі, а от предмет завжди у нижньому.
 # Для оформлення цієї задачі вам потрібно використати f-string
-user_name = input('Введіть імя та прізвище: ')
+user_name = input('Введіть ім\'я та прізвище: ')
 user_class = input('Введіть клас: ')
 user_birth_date = input('Введіть день народження: ')
 user_favorite_subject = input('Введіть улюблений предмет: ')
 
-print(f"{user_name.upper()}", f"{user_class}",
-      f"{user_birth_date}", f"{user_favorite_subject.lower()}")
+result = f"{user_name.upper()} {user_class} {user_birth_date} {user_favorite_subject.lower()}"
+print(result)
+
