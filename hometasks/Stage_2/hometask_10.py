@@ -41,6 +41,9 @@ for word in total_tuple:
     else:
         list_result_2.append(word)
 
-result_1 = tuple(list_result_1)
-result_2 = tuple(list_result_2)
+result = tuple(list_result_1)
+print(result)
+
+result = tuple(list_result_2)
+print(result)
 
