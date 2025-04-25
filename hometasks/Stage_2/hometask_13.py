@@ -1,3 +1,5 @@
+
+
 # Задача 1: У вас є 77 задач і 13 людей. Ви хочете розподілити задачі порівну між усіма людьми.
 # Напишіть програму, яка визначить, скільки задач отримає кожна людина, і скільки задач залишиться нерозподіленими.
 tasks = 77
@@ -78,6 +80,19 @@ number_1 = number % 10
 number_2 = ((number % 100) - number_1) / 10
 number_3 = (number - (number % 100)) / 100
 total = number_3 + number_2 + number_1
+
+
+# Спосіб 3:
+number = 111
+length_of_digits = len(str(number))
+
+for loop in range(length_of_digits):
+    last_digit_part = number % 10
+    non_last_digit_part = number // 10
+    number = non_last_digit_part
+    total += last_digit_part
+
+print(total)
 
 
 # Задача 7
