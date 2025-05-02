@@ -3,7 +3,6 @@ entered_string = input("Enter you string: ")
 result = entered_string.upper()
 print(result)
 
-
 # Задача 2: Створіть програму, яка приймає рядок від користувача та заміняє всі входження символу 'a' на '*',
 # якщо символ ‘а’ відсутній до відповідне повідомлення.
 entered_string = input("Enter the string: ")
@@ -52,6 +51,20 @@ else:
     print("символ ‘а’ відсутній до відповідне повідомлення.")
 
 
+# 8.2 dict data type rework
+# Задача 2: Створіть програму, яка приймає рядок від користувача та заміняє всі входження символу 'a' на '*',
+# якщо символ ‘а’ відсутній до відповідне повідомлення.
+user_string = input("Введіть слово")
+dict_a = {
+    'a': '*',
+    'A': '*',
+    'а': '*',
+    'А': '*'
+}
+result = user_string.replace('a', dict_a['a']).replace('A', dict_a['A']).replace('а', dict_a['а']).replace('А', dict_a['А'])
+print(result)
+
+
 # Задача 3: Напишіть програму,
 # яка приймає рядок від користувача та виводить його з позначенням кількості символів у ньому.
 entered_string = input("Enter string: ")
@@ -59,7 +72,6 @@ print(f"Entered string: {entered_string}")
 
 length_of_string = len(entered_string)
 print(f"Length of string by using length method: {length_of_string}")
-
 
 # **Додаткові завдання:**
 # Задача 4: Напишіть програму яка перевіряє рядок на вказане користувачем слово
@@ -77,7 +89,6 @@ Catch me or I go Houdini"""
 user_input = input('Вкажіть слово: ')
 result = base_text.lower().count(user_input.lower())
 print(result)
-
 
 # Задача 5: До вас звернувся ваш друг тестувальник за допомогою,
 # в нього є набір юрлів де потрібно автоматично міняти юрл з prod на qa тобто з ось такої стрічки:
