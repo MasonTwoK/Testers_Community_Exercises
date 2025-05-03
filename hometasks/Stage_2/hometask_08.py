@@ -74,6 +74,33 @@ else:
     print("'a' symbol is missing in user string")
 
 
+# 8.2 dict data type rework (Версія Паши без .replace)
+# Задача 2: Створіть програму, яка приймає рядок від користувача та заміняє всі входження символу 'a' на '*',
+# якщо символ ‘а’ відсутній до відповідне повідомлення.
+
+starred_characters = {
+    'a': '*',
+    'A': '*',
+    'а': '*',
+    'А': '*'
+}
+
+user_input = input("Введіть слово")
+new_string = ''
+
+for character in user_input:
+    if character in starred_characters.keys():
+        new_string += starred_characters.get(character)
+    else:
+        new_string += character
+
+if user_input != new_string:
+    result = new_string
+    print(result)
+else:
+    print("Cимвол ‘а’ відсутній.")
+
+
 # Задача 3: Напишіть програму,
 # яка приймає рядок від користувача та виводить його з позначенням кількості символів у ньому.
 entered_string = input("Enter string: ")
