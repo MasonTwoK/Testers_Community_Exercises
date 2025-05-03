@@ -54,15 +54,24 @@ else:
 # 8.2 dict data type rework
 # Задача 2: Створіть програму, яка приймає рядок від користувача та заміняє всі входження символу 'a' на '*',
 # якщо символ ‘а’ відсутній до відповідне повідомлення.
-user_string = input("Введіть слово")
+default_user_string = input("Введіть слово")
 dict_a = {
     'a': '*',
     'A': '*',
     'а': '*',
     'А': '*'
 }
-result = user_string.replace('a', dict_a['a']).replace('A', dict_a['A']).replace('а', dict_a['а']).replace('А', dict_a['А'])
-print(result)
+
+starred_user_string = default_user_string
+for key in dict_a.keys():
+    if key in starred_user_string:
+        result = starred_user_string.replace(key, dict_a.get(key))
+        starred_user_string = result
+
+if starred_user_string != default_user_string:
+    print(starred_user_string)
+else:
+    print("'a' symbol is missing in user string")
 
 
 # Задача 3: Напишіть програму,
