@@ -1,5 +1,5 @@
 # Задача 1: Напишіть функцію sub_numbers, яка приймає два аргументи num1 та num2 і повертає їхню різницю.
-from progress.hometasks.Stage_1.hometask_01 import result
+from hometasks.Stage_1.hometask_01 import result
 
 
 def sub_numbers(num_1, num_2):
