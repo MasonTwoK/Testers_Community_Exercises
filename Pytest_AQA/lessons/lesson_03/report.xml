@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="11" time="3.075" timestamp="2025-05-07T23:51:56.788383+03:00" hostname="Alineware"><testcase classname="Pytest_AQA.lessons.lesson_03.test_scope_1_with_class.TestNew" name="test_1" time="0.000" /><testcase classname="Pytest_AQA.lessons.lesson_03.test_scope_1_with_class.TestNew" name="test_2" time="0.000" /><testcase classname="Pytest_AQA.lessons.lesson_03.test_scope_1_with_class" name="test_3" time="0.000" /><testcase classname="Pytest_AQA.lessons.lesson_03.test_scope_1_with_class" name="test_qa_2" time="0.000" /><testcase classname="Pytest_AQA.lessons.lesson_03.test_scope_1_with_class" name="test_qa_3" time="0.000"><failure message="assert False">def test_qa_3():
+&gt;       assert False
+E       assert False
+
+test_scope_1_with_class.py:21: AssertionError</failure></testcase><testcase classname="Pytest_AQA.lessons.lesson_03.test_scope_1_with_class" name="test_qa_4" time="0.000"><failure message="assert False">def test_qa_4():
+&gt;       assert False
+E       assert False
+
+test_scope_1_with_class.py:25: AssertionError</failure></testcase><testcase classname="Pytest_AQA.lessons.lesson_03.test_scope_1_with_class" name="test_qa_5" time="2.001" /><testcase classname="Pytest_AQA.lessons.lesson_03.test_scope_1_with_class" name="test_qa_6" time="1.002" /><testcase classname="Pytest_AQA.lessons.lesson_03.test_scope_2" name="test_4" time="0.001" /><testcase classname="Pytest_AQA.lessons.lesson_03.test_scope_2" name="test_5" time="0.001"><failure message="assert False">def test_5():
+&gt;       assert False
+E       assert False
+
+test_scope_2.py:6: AssertionError</failure></testcase><testcase classname="Pytest_AQA.lessons.lesson_03.test_scope_2" name="test_qa_1" time="0.001" /></testsuite></testsuites>
