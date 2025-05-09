@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="0.055" timestamp="2025-05-10T00:18:02.108784+03:00" hostname="Alineware"><testcase classname="Pytest_AQA.hometasks.hometask_03.hometask_03_test" name="test_hometask_03_01" time="0.000" /><testcase classname="Pytest_AQA.hometasks.hometask_03.hometask_03_test" name="test_hometask_03_02" time="0.000"><failure message="assert False">def test_hometask_03_02():
+&gt;       assert False
+E       assert False
+
+hometask_03_test.py:18: AssertionError</failure></testcase><testcase classname="Pytest_AQA.hometasks.hometask_03.hometask_03_test" name="test_hometask_03_03" time="0.000" /></testsuite></testsuites>
