@@ -2,6 +2,7 @@ Include/
 Lib/
 Scripts/
 pyvenv.cfg
+.venv/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
