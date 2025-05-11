@@ -2,7 +2,7 @@ import pytest
 
 
 @pytest.fixture
-def database_interaction():
-    print("db is connected")
-    yield
-    print("db is disconnected")
+def numbers(tuple_5=(1, 2, 3, 4, 5)):
+    print("fixture setup reached")
+    yield tuple_5
+    print("fixture teardown reached")
