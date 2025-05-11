@@ -1,5 +1,3 @@
-# Задачі для кращого розуміння матеріалу:
-
 # Задача 1: Напишіть клас для тестування бази даних як на уроці з відео,
 # де використовується методи "setup" та "teardown" для підключення і відключення від бази даних.
 # Та зробіть декілька тестів для перевірки якогось значення заданого у "setup".
@@ -12,11 +10,11 @@ class TestSuiteIntegrationBD:
         print("DB is disconnected")
 
     def test_qa_db_1(self):
-        print("test 1 run")
+        print("test db 1 run")
         assert self.data == 1
 
     def test_qa_db_2(self):
-        print("test 1 run")
+        print("test db 2 run")
         assert False
 
 
@@ -26,14 +24,22 @@ class TestSuiteIntegrationBD:
 # Напишіть тест test_addition, щоб перевірити, чи сума чисел у кортежі дорівнює 15.
 # Напишіть тест test_found, щоб перевірити, чи число 5 є у кортежі
 def test_numbers_in_tuple_check(numbers):
-    print("test 3 run")
+    print("test check numbers in tuple run")
     assert numbers == (1, 2, 3, 4, 5)
 
 
 def test_single_number_in_tuple_check(numbers):
-    print("test 4 run")
+    print("test check single number in tuple run")
     assert 4 in numbers
 
 
 # Задача 3: Створіть набір тестів,
 # які використовують одну фікстуру для підготовки даних перед кожним тестом та очищення після нього.
+def test_qa_db_3(db_connection_disconnection):
+    print("test db 3 run")
+    assert False
+
+
+def test_qa_db_4(db_connection_disconnection):
+    print("test db 4 run")
+    assert True

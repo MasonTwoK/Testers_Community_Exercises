@@ -3,6 +3,11 @@ import pytest
 
 @pytest.fixture
 def numbers(tuple_5=(1, 2, 3, 4, 5)):
-    print("fixture setup reached")
     yield tuple_5
-    print("fixture teardown reached")
+
+
+@pytest.fixture
+def db_connection_disconnection():
+    print("db connected")
+    yield
+    print("db disconnected")
