@@ -3,6 +3,25 @@
 # Задача 1: Напишіть клас для тестування бази даних як на уроці з відео,
 # де використовується методи "setup" та "teardown" для підключення і відключення від бази даних.
 # Та зробіть декілька тестів для перевірки якогось значення заданого у "setup".
+class TestSuiteIntegrationBD:
+    def setup_method(self):
+        print("DB is connected")
+
+    def teardown_method(self):
+        print("DB is disconnected")
+
+    def test_qa_db_1(self):
+        print("test 1 run")
+        assert True
+
+    def test_qa_db_2(self):
+        print("test 1 run")
+        assert False
+
+
+def test_qa_db_3(database_interaction):
+    print("test 3 run")
+    assert True
 
 # Задача 2: Створіть фікстуру numbers, яка повертає кортеж чисел (1, 2, 3, 4, 5).
 # Використайте цю фікстуру у двох тестах для перевірки суми чисел у кортежі та перевірки наявності числа.
