@@ -21,7 +21,27 @@ def test_data_length(initial_data):
 def test_data_certain_name_contains(initial_data):
     assert 'Luke' in initial_data
 
+
 # Задача 3: Перепишіть тест з попереднього уроку де в нас був Class TestA та містив setup_method
 # та teardown_method зробіть три теста в середині цього класу.
 # Та напишіть в коментарях до якого скоупу належить ваш setup_method та teardown_method.
 # Якщо в вас є підписка на перевірку то вкажіть в здачі домашки скоуп.
+# Відповідь: setup_method та teardown_method належать до functional scope
+class TestClassA1:
+    def setup_method(self):
+        print('in class setup method reached')
+
+    def teardown_method(self):
+        print('in class teardown method reached')
+
+    def test_func_a11(self, scope_session, scope_package, scope_module, scope_class, scope_function):
+        print("test a.11 is running")
+        assert True
+
+    def test_func_a12(self, scope_session, scope_package, scope_module, scope_class, scope_function):
+        print("test a.12 is running")
+        assert True
+
+    def test_func_a13(self, scope_session, scope_package, scope_module, scope_class, scope_function):
+        print("test a.13 is running")
+        assert True
