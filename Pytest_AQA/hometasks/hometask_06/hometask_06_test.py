@@ -22,19 +22,17 @@ def test_third():
 # Задача 2: Створіть тести, де результат виконання одного тесту впливає на наступний.
 # Наприклад, переконайтеся, що після успішного виконання test_login() виконується test_access_granted(),
 # а після невдалого виконання test_login() - test_access_denied()
-@pytest.mark.skip(reason="task solution is wrong")
+# @pytest.mark.skip(reason="task solution is wrong")
 def test_login(result=True):
     assert result
 
 
-@pytest.mark.skip(reason="task solution is wrong")
-@pytest.mark.dependency(depends=["test_login"])
+@pytest.mark.order()
 def test_access_granted():
     assert True
 
 
-@pytest.mark.skip(reason="task solution is wrong")
-@pytest.mark.dependency(depends=["test_login"], scope="session")
+@pytest.mark.order(after='denied')
 def test_access_denied():
     assert True
 
@@ -92,4 +90,3 @@ def test_qa_2(test_data):
 @pytest.mark.order(10)
 def test_qa_1(test_data):
     assert True
-
