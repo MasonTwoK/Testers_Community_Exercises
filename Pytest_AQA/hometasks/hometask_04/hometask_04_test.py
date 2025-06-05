@@ -1,21 +1,24 @@
 # Задача 1: Напишіть клас для тестування бази даних як на уроці з відео,
 # де використовується методи "setup" та "teardown" для підключення і відключення від бази даних.
 # Та зробіть декілька тестів для перевірки якогось значення заданого у "setup".
+
+
 class TestSuiteIntegrationBD:
     def setup_method(self):
         print("DB is connected")
         self.data = 1
 
+    @staticmethod
     def teardown_method(self):
         print("DB is disconnected")
 
-    def test_qa_db_1(self):
+    def test_qa_1(self):
         print("test db 1 run")
         assert self.data == 1
 
-    def test_qa_db_2(self):
+    def test_qa_2(self):
         print("test db 2 run")
-        assert False
+        assert self.data == 2
 
 
 # Задача 2: Створіть фікстуру numbers, яка повертає кортеж чисел (1, 2, 3, 4, 5).
@@ -23,23 +26,20 @@ class TestSuiteIntegrationBD:
 # Напишіть фікстуру numbers, яка повертає кортеж чисел.
 # Напишіть тест test_addition, щоб перевірити, чи сума чисел у кортежі дорівнює 15.
 # Напишіть тест test_found, щоб перевірити, чи число 5 є у кортежі
-def test_numbers_in_tuple_check(numbers):
-    print("test check numbers in tuple run")
-    assert numbers == (1, 2, 3, 4, 5)
+
+def test_addition(numbers):
+    assert sum(numbers) == 15
 
 
-def test_single_number_in_tuple_check(numbers):
-    print("test check single number in tuple run")
-    assert 4 in numbers
+def test_found(numbers):
+    assert 5 in numbers
 
 
 # Задача 3: Створіть набір тестів,
 # які використовують одну фікстуру для підготовки даних перед кожним тестом та очищення після нього.
-def test_qa_db_3(db_connection_disconnection):
-    print("test db 3 run")
-    assert False
+def test_qa_3(db_connection_disconnection):
+    assert 1 == db_connection_disconnection.value_1
 
 
-def test_qa_db_4(db_connection_disconnection):
-    print("test db 4 run")
-    assert True
+def test_qa_4(db_connection_disconnection):
+    assert 0 == db_connection_disconnection.value_2
