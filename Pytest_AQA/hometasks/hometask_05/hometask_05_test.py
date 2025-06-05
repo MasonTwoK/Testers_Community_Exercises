@@ -5,11 +5,11 @@
 class TestSuiteHomeTask1:
     def test_hometask5_11(self, scope_function, scope_session):
         print("test hometask 5.1.1 running")
-        assert True
+        assert scope_function == 11
 
     def test_hometask5_12(self, scope_function, scope_session):
         print("test hometask 5.1.2 running")
-        assert False
+        assert scope_session == 15
 
 
 # Задача 2: Створити фікстуру initial_data зі скоупом module, яка повертає список з  трьома іменами.
@@ -26,22 +26,25 @@ def test_data_certain_name_contains(initial_data):
 # та teardown_method зробіть три теста в середині цього класу.
 # Та напишіть в коментарях до якого скоупу належить ваш setup_method та teardown_method.
 # Якщо в вас є підписка на перевірку то вкажіть в здачі домашки скоуп.
-# Відповідь: setup_method та teardown_method належать до functional scope
 class TestClassA1:
-    def setup_method(self):
-        print('in class setup method reached')
+    @staticmethod
+    def setup_method():
+        print('in class setup method reached')  # Відповідь: setup_method належить до functional scope
 
-    def teardown_method(self):
-        print('in class teardown method reached')
+    @staticmethod
+    def teardown_method():
+        print('in class teardown method reached')  # Відповідь: teardown_method належить до functional scope
 
-    def test_func_a11(self, scope_session, scope_package, scope_module, scope_class, scope_function):
+    def test_func_a11(self, scope_function):
         print("test a.11 is running")
-        assert True
+        assert scope_function == 11
 
-    def test_func_a12(self, scope_session, scope_package, scope_module, scope_class, scope_function):
+    def test_func_a12(self, scope_session, scope_package):
         print("test a.12 is running")
-        assert True
+        assert scope_session == 15
+        assert scope_package == 14
 
-    def test_func_a13(self, scope_session, scope_package, scope_module, scope_class, scope_function):
+    def test_func_a13(self, scope_module, scope_class):
         print("test a.13 is running")
-        assert True
+        assert scope_module == 13
+        assert scope_class == 12

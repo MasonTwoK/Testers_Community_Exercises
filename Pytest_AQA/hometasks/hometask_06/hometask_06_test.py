@@ -4,17 +4,17 @@
 import pytest
 
 
-@pytest.mark.order(after="test_qa_1")
+@pytest.mark.order(1)
 def test_first():
     assert True
 
 
-@pytest.mark.order(after="test_first")
+@pytest.mark.order(2)
 def test_second():
     assert True
 
 
-@pytest.mark.order(after="test_second")
+@pytest.mark.order(3)
 def test_third():
     assert True
 
@@ -42,51 +42,51 @@ def test_access_denied():
 # яка виводить "test start" перед тестом і "test finish" після завершення тесту.
 # Підтвердіть, що тести виконуються у вірному порядку відповідно до маркерів,
 # а також виводять необхідні повідомлення фікстури.
-@pytest.mark.order(1)
+@pytest.mark.order(10)
 def test_qa_10(test_data):
     assert True
 
 
-@pytest.mark.order(2)
+@pytest.mark.order(9)
 def test_qa_9(test_data):
     assert True
 
 
-@pytest.mark.order(3)
+@pytest.mark.order(8)
 def test_qa_8(test_data):
     assert True
 
 
-@pytest.mark.order(4)
+@pytest.mark.order(7)
 def test_qa_7(test_data):
     assert True
 
 
-@pytest.mark.order(5)
+@pytest.mark.order(6)
 def test_qa_6(test_data):
     assert True
 
 
-@pytest.mark.order(6)
+@pytest.mark.order(5)
 def test_qa_5(test_data):
     assert True
 
 
-@pytest.mark.order(7)
+@pytest.mark.order(4)
 def test_qa_4(test_data):
     assert True
 
 
-@pytest.mark.order(8)
+@pytest.mark.order(3)
 def test_qa_3(test_data):
     assert True
 
 
-@pytest.mark.order(9)
+@pytest.mark.order(2)
 def test_qa_2(test_data):
     assert True
 
 
-@pytest.mark.order(10)
+@pytest.mark.order(1)
 def test_qa_1(test_data):
     assert True
